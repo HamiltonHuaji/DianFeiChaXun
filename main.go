@@ -244,7 +244,7 @@ func main() {
 	token := login(*username, *password)
 	oddl := query(token, *projectId, *roomId)
 	fmt.Printf("剩余电量: %.2f度", oddl)
-	if oddl < 1 {
-		Ft(ftKey, "电量已不足一度", *username)
+	if oddl < 5 {
+		Ft(ftKey, "电量已不足5度", *username)
 	}
 }
